@@ -11,7 +11,7 @@ cd devpot_week9/Lab5
 
 ```
 
-commit
+commit 5
 
 
 ### Next, create a new file called Dockerfile in the root of your project directory with the following contents:
