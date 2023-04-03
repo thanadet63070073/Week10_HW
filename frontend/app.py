@@ -28,7 +28,7 @@ number = st.text_input('ENTER YOUR NUMBER')
 
 uploaded_file = st.file_uploader("Choose a image file", type=['jpg', 'png', 'jpeg'])
 if uploaded_file is not None:
-    with open(os.path.join("Img", uploaded_file.name),"wb") as f:
+    with open(os.path.join("../Img", uploaded_file.name),"wb") as f:
         f.write(uploaded_file.getbuffer())
     
 
