@@ -1,10 +1,11 @@
 FROM python:3.9-slim-buster
 
-WORKDIR /app
+EXPOSE 8081
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY . .
+WORKDIR /app
 
 ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8081", "--server.address=0.0.0.0"]
