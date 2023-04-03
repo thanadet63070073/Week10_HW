@@ -34,7 +34,7 @@ if uploaded_file is not None:
 
 if st.button("submit"):
     if uploaded_file is not None:
-        image_file = "./Img/" + uploaded_file.name
+        image_file = "../Img/" + uploaded_file.name
         url        = "http://54.237.95.186:8082"
 
         # Load the image
