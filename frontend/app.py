@@ -35,7 +35,7 @@ if uploaded_file is not None:
 if st.button("submit"):
     if uploaded_file is not None:
         image_file = "./Img/" + uploaded_file.name
-        url        = "http://54.173.65.17:8088"
+        url        = "http://54.173.65.17:8082"
 
         # Load the image
         image        = cv2.imread(image_file)
