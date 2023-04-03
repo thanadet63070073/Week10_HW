@@ -1,10 +1,11 @@
+Video: https://drive.google.com/drive/folders/1MNls5EYAeGrXy2AiYB5bgBCxFwK87RNC?usp=sharing
+
 ### Clone
 
 ```
 git clone https://github.com/Tuchsanai/devpot_week9.git
 ```
 
-..
 ### go to Directory
 ```
 cd devpot_week9/Lab5
