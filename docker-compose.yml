@@ -11,7 +11,4 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    command: streamlit run frontend/app.py --server.port 8081
-    ports:
-      - 8081:80
     image: thanadet63070073/frontend_image:1.0
