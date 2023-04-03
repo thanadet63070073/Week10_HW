@@ -10,7 +10,7 @@ git clone https://github.com/Tuchsanai/devpot_week9.git
 cd devpot_week9/Lab5
 
 ```
-
+s
 
 ### Next, create a new file called Dockerfile in the root of your project directory with the following contents:
 ```
