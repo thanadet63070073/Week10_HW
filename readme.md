@@ -4,7 +4,7 @@
 git clone https://github.com/Tuchsanai/devpot_week9.git
 ```
 
-
+..
 ### go to Directory
 ```
 cd devpot_week9/Lab5
