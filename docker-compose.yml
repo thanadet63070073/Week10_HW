@@ -5,10 +5,10 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    image: thanadet63070073/backend-image
+    image: thanadet63070073/backend_image
 
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    image: thanadet63070073/frontend-image
+    image: thanadet63070073/frontend_image
