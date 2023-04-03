@@ -7,4 +7,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["streamlit", "run", "app.py", "--host", "0.0.0.0", "--port", "80"]
+ENTRYPOINT ["streamlit", "run", "streamlit_app.py", "--server.port=8081", "--server.address=0.0.0.0"]
