@@ -16,7 +16,8 @@ pipeline {
                 steps {
                     dir('Week10_HW') {
                         echo "Current path is ${pwd()}"
-                        sh "docker-compose build"
+                        sh "docker -t build frontend_image"
+                        sh "docker -t build backend_image"
                     }
                 }
             }
