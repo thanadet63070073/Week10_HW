@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 COPY . .
 WORKDIR /app
 
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8081", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8081", "--server.address=54.237.47.95"]
