@@ -36,10 +36,10 @@ pipeline {
             stage('Clear All Container Stage') {
                 steps {
                     echo 'Initial : Delete containers and images'
-                    sh 'docker stop frontend_server || true'
-                    sh 'docker stop backend_server || true'
-                    sh 'docker rm frontend_server || true'
-                    sh 'docker rm backend_server || true'
+                    sh 'docker stop frontend_container || true'
+                    sh 'docker stop backend_container || true'
+                    sh 'docker rm frontend_container || true'
+                    sh 'docker rm backend_container || true'
                     sh 'docker rmi thanadet63070073/frontend_image:1.0 || true'
                     sh 'docker rmi thanadet63070073/backend_image:1.0 || true'
                 }
@@ -48,7 +48,6 @@ pipeline {
             stage('Pull Stage') {
                 steps {
                     dir('Week10_HW') {
-                        echo "Current path is ${pwd()}"
                         sh "docker pull thanadet63070073/frontend_image:1.0"
                         sh "docker pull thanadet63070073/backend_image:1.0"
                     }
@@ -58,9 +57,8 @@ pipeline {
             stage('Run Stage') {
                 steps {
                     dir('Week10_HW') {
-                        echo "Current path is ${pwd()}"
-                        sh "docker run -d -p 8081:80 --name frontend_server thanadet63070073/frontend_image:1.0"
-                        sh "docker run -d -p 8082:80 --name backend_server  thanadet63070073/backend_image:1.0"
+                        sh "docker run -d -p 8081:80 --name frontend_container thanadet63070073/frontend_image:1.0"
+                        sh "docker run -d -p 8082:80 --name backend_container  thanadet63070073/backend_image:1.0"
                     }
                 }
             }
