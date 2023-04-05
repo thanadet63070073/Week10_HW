@@ -59,7 +59,7 @@ pipeline {
                 steps {
                     dir('Week10_HW') {
                         echo "Current path is ${pwd()}"
-                        sh "docker run -d -p 8501:8501 --name frontend_server thanadet63070073/frontend_image:1.0"
+                        sh "docker run -d -p 8081:80 --name frontend_server thanadet63070073/frontend_image:1.0"
                         sh "docker run -d -p 8082:80 --name backend_server  thanadet63070073/backend_image:1.0"
                     }
                 }

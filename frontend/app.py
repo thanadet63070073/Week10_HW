@@ -27,11 +27,14 @@ surname = st.text_input('ENTER YOUR SURNAME')
 number = st.text_input('ENTER YOUR NUMBER')
 
 uploaded_file = st.file_uploader("Choose a image file", type=['jpg', 'png', 'jpeg'])
+if uploaded_file is not None:
+    with open(os.path.join("Img", uploaded_file.name),"wb") as f:
+        f.write(uploaded_file.getbuffer())
 
 if st.button("submit"):
     if uploaded_file is not None:
         image_file = uploaded_file.name
-        url        = "http://54.237.95.186:8082"
+        url        = "http://54.198.103.253:8082"
 
         # Load the image
         image        = cv2.imread(image_file)
